@@ -13,12 +13,14 @@ class Article {
     let qiitaID: String
     let createdAt: Date
     let url: URL
+    let tags: [String]
     
-    init(title: String, id: String, created: Date, url: URL) {
+    init(title: String, id: String, created: Date, url: URL, tags: [String]) {
         self.title = title
         self.qiitaID = id
         self.createdAt = created
         self.url = url
+        self.tags = tags
     }
     
     func returnURL() -> URL{
