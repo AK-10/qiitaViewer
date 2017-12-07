@@ -11,19 +11,16 @@ import Foundation
 class Article {
     let title: String
     let qiitaID: String
-    let createdAt: Date
-    let url: URL
+//    let createdAt: Date
+    let url: URL?
     let tags: [String]
     
-    init(title: String, id: String, created: Date, url: URL, tags: [String]) {
+    init(title: String, id: String, url: String, tags: [String]) {
         self.title = title
         self.qiitaID = id
-        self.createdAt = created
-        self.url = url
+//        self.createdAt = created
+        self.url = URL(string: url)!
         self.tags = tags
     }
-    
-    func returnURL() -> URL{
-        return self.url
-    }
+
 }
