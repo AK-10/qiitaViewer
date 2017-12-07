@@ -13,29 +13,13 @@ import SwiftyJSON
 class ViewController: UIViewController {
 
     @IBOutlet weak var articleTable: UITableView!
-    var items: [[String: Any]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // http request
-        let url = URL(string: "https://qiita.com/api/v2/items?")
-        // dataTaskで具体的な仕事をする
-        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
-            if let data = data {
-//                print(response)
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-                    print(json)
-                } catch {
-                    print("Serialize Error")
-                }
-            } else {
-                print(error ?? "error")
-            }
-        }
+//        let url = URL(string: "https://qiita.com/api/v2/items?")
         
-        task.resume()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -65,7 +49,7 @@ class ViewController: UIViewController {
                 print("Error: did not receive data")
                 return
             }
-            let json = JSON(data: responseData)
+            let json = JSON(responseData)
                 
         }
         task.resume()
