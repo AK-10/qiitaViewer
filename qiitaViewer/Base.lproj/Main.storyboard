@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,13 +23,53 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gIt-cl-k57">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="56" id="gIt-cl-k57" customClass="customCell" customModule="qiitaViewer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gIt-cl-k57" id="oCR-hW-ku8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xof-Rl-Yzi" userLabel="title">
+                                                    <rect key="frame" x="24" y="8" width="300" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaY-Sv-pzk" userLabel="name">
+                                                    <rect key="frame" x="24" y="38" width="150" height="11"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PK0-se-hXC" userLabel="tags">
+                                                    <rect key="frame" x="182" y="38" width="150" height="11"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
+                                            <constraints>
+                                                <constraint firstItem="PK0-se-hXC" firstAttribute="height" secondItem="oCR-hW-ku8" secondAttribute="height" multiplier="0.2" id="0rA-5j-2ou"/>
+                                                <constraint firstItem="jaY-Sv-pzk" firstAttribute="leading" secondItem="oCR-hW-ku8" secondAttribute="leading" constant="24" id="4MQ-HS-CV4"/>
+                                                <constraint firstItem="PK0-se-hXC" firstAttribute="leading" secondItem="jaY-Sv-pzk" secondAttribute="trailing" constant="8" id="64M-JI-DMh"/>
+                                                <constraint firstItem="xof-Rl-Yzi" firstAttribute="leading" secondItem="oCR-hW-ku8" secondAttribute="leading" constant="24" id="7ui-zJ-TRT"/>
+                                                <constraint firstItem="xof-Rl-Yzi" firstAttribute="width" secondItem="oCR-hW-ku8" secondAttribute="width" multiplier="0.8" id="C9c-VO-fi4"/>
+                                                <constraint firstItem="xof-Rl-Yzi" firstAttribute="height" secondItem="oCR-hW-ku8" secondAttribute="height" multiplier="0.4" id="FqJ-BF-XVS"/>
+                                                <constraint firstItem="jaY-Sv-pzk" firstAttribute="width" secondItem="oCR-hW-ku8" secondAttribute="width" multiplier="0.4" id="SHp-Lq-1Pi"/>
+                                                <constraint firstItem="PK0-se-hXC" firstAttribute="width" secondItem="oCR-hW-ku8" secondAttribute="width" multiplier="0.4" id="ShZ-mS-kel"/>
+                                                <constraint firstItem="PK0-se-hXC" firstAttribute="baseline" secondItem="jaY-Sv-pzk" secondAttribute="baseline" id="X1I-3L-gK3"/>
+                                                <constraint firstItem="jaY-Sv-pzk" firstAttribute="top" secondItem="xof-Rl-Yzi" secondAttribute="bottom" constant="8" id="lHs-3X-YCC"/>
+                                                <constraint firstItem="jaY-Sv-pzk" firstAttribute="height" secondItem="oCR-hW-ku8" secondAttribute="height" multiplier="0.2" id="mtL-QE-0cU"/>
+                                                <constraint firstItem="xof-Rl-Yzi" firstAttribute="top" secondItem="oCR-hW-ku8" secondAttribute="top" constant="8" id="qtO-mu-qbx"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="jaY-Sv-pzk" id="wFk-0w-ZRr"/>
+                                            <outlet property="tagsLabel" destination="PK0-se-hXC" id="cDb-gW-gyP"/>
+                                            <outlet property="titleLabel" destination="xof-Rl-Yzi" id="nPA-f7-8G2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
