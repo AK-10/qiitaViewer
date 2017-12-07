@@ -13,6 +13,7 @@ import SwiftyJSON
 class ViewController: UIViewController {
 
     @IBOutlet weak var articleTable: UITableView!
+    var items: [Article] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
