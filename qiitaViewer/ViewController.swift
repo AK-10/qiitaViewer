@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         // http request
         let url = "https://qiita.com/api/v2/items?"
         articles = getArticles(url: url)
+//        print(articles.count)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func getArticles(url: String) -> [Article] {
+    private func getArticles(url: String) -> [Article] {
         // setup URLrequest
         guard let url = URL(string: url) else {
             print("Error: can not create URL")
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         var items: [Article] = []
-        let task = session.dataTask(with: urlRequest) { (data, response, error) in
+        let task = session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
             guard error == nil else {
                 print("error calling")
                 return
@@ -51,30 +52,29 @@ class ViewController: UIViewController {
             }
             let json = JSON(responseData)
             for (_,subJson):(String, JSON) in json {
-////                // Do something you want
+                // Do something you want
                 let item = Article(title: subJson["title"].stringValue, id: subJson["user"]["id"].stringValue, url: subJson["url"].stringValue, tags: subJson["tags"].arrayValue.map({ $0["name"].stringValue }))
                 items.append(item)
             }
-            for i in items {
-                print(i.title)
-            }
-//            print(json[0]["tags"].arrayValue.map({ $0["name"].stringValue }))
-        }
-        
+            print("a", items.count) // closure内が後に呼ばれている -> 20
+        })
+        print("b", items.count) //先に呼ばれてる why? -> 0
         task.resume()
         return items
     }
-
 }
 
-//extension ViewController: UITableViewDelegate, UITableViewDataSource {
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return articles.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//    }
-//
-//}
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return articles.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = articleTable.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! customCell
+        cell.setCell(article: articles[indexPath.row])
+        return cell
+    }
+
+}
 

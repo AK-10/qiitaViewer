@@ -26,10 +26,10 @@ class customCell: UITableViewCell {
         // おそらくcell選択時の画面遷移
     }
     
-    func setCell(title: String, name: String, tags: [String]) {
-        titleLabel.text = title
-        nameLabel.text = "Writer: " + name
-        tagsLabel.text = "Tags: " + tags.reduce("") { $0 + ", " + $1 }
+    func setCell(article: Article) {
+        titleLabel.text = article.title
+        nameLabel.text = "Writer: " + article.qiitaID
+        tagsLabel.text = "Tags: " + article.tags.reduce("") { $0 + ", " + $1 }
     }
 
 }

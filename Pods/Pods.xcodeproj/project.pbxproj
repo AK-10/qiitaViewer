@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,42 +34,42 @@
 
 /* Begin PBXFileReference section */
 		05CA09B061E193906653AC21FD3A94F1 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		1184D1F3AA5B66BA5330B4863376FE7D /* Pods-qiitaViewerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-qiitaViewerUITests.modulemap"; sourceTree = "<group>"; };
+		1184D1F3AA5B66BA5330B4863376FE7D /* Pods-qiitaViewerUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-qiitaViewerUITests.modulemap"; sourceTree = "<group>"; };
 		1611976881E4A286C5E241AE202055EB /* Pods-qiitaViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-qiitaViewer.release.xcconfig"; sourceTree = "<group>"; };
 		1ACD2ED466F08825CEAC54BFF7A6675C /* Pods-qiitaViewerUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-qiitaViewerUITests-resources.sh"; sourceTree = "<group>"; };
-		1B940DE008AF8B9046B689731315EDE1 /* Pods_qiitaViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_qiitaViewer.framework; path = "Pods-qiitaViewer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B940DE008AF8B9046B689731315EDE1 /* Pods_qiitaViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiitaViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		230F700D8D8E6859FE063ACFEE645B95 /* Pods-qiitaViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-qiitaViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		25C8A8B45670F64CB632A405BAC83079 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E7F7C62EE34D2D271E6E1234A2002B2 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		32B9BBA8F5B33E56C38F5546432F66B7 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		42517207171A81B07AC11A7C0D65E74F /* Pods-qiitaViewerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-qiitaViewerTests-dummy.m"; sourceTree = "<group>"; };
-		4F223721B9BD60EA04EB5EB3CF37EFED /* Pods_qiitaViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_qiitaViewerUITests.framework; path = "Pods-qiitaViewerUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F223721B9BD60EA04EB5EB3CF37EFED /* Pods_qiitaViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiitaViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50E18BCF85231EBC3A2750F3D7ED918C /* Pods-qiitaViewer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-qiitaViewer-acknowledgements.markdown"; sourceTree = "<group>"; };
 		56D4EAD47541274E718B6202C862DB34 /* Pods-qiitaViewerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-qiitaViewerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5D216B85ACB4DDE44919B7805C9B5DFC /* Pods-qiitaViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-qiitaViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		87639108B972751C16F5F02FD960BDFD /* Pods-qiitaViewer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-qiitaViewer-dummy.m"; sourceTree = "<group>"; };
 		8A149D320794F41A1EF66B46C6E7EA39 /* Pods-qiitaViewer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-qiitaViewer-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DCB7F3CDDF80FA8F59DBD5334C8023F /* Pods-qiitaViewerUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-qiitaViewerUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A17099E3F5C122897A90F76B9C7244C9 /* Pods-qiitaViewerUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-qiitaViewerUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		A1B90DE7DCD8EED0C7747F77CB7BC4AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A72A29A1B4E100EAC2C86A039FC1CD43 /* Pods-qiitaViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-qiitaViewerTests.release.xcconfig"; sourceTree = "<group>"; };
-		AAC53613E665CF01CB15075D78125DC4 /* Pods-qiitaViewer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-qiitaViewer.modulemap"; sourceTree = "<group>"; };
+		AAC53613E665CF01CB15075D78125DC4 /* Pods-qiitaViewer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-qiitaViewer.modulemap"; sourceTree = "<group>"; };
 		ACF202F52FDA1E247485C2929ED87BD5 /* Pods-qiitaViewer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-qiitaViewer-frameworks.sh"; sourceTree = "<group>"; };
 		B198B23F7CD3F6BA555A94B640516601 /* Pods-qiitaViewerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-qiitaViewerTests-umbrella.h"; sourceTree = "<group>"; };
 		B4312DDC27EF53428D4D0ABAAE9304C6 /* Pods-qiitaViewerUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-qiitaViewerUITests-frameworks.sh"; sourceTree = "<group>"; };
 		B75A5EE6345934F4D07F861D28D27D1C /* Pods-qiitaViewerUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-qiitaViewerUITests-umbrella.h"; sourceTree = "<group>"; };
 		B91748109D006FAADA9BC2321C403D65 /* Pods-qiitaViewerTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-qiitaViewerTests-resources.sh"; sourceTree = "<group>"; };
-		BAD993F122D296B42FB42A82A299D897 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAD993F122D296B42FB42A82A299D897 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF610E40BDF6E542FA21FF7E5491205 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		BC6F6A9D90546CE748C6EAB18E639164 /* Pods-qiitaViewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-qiitaViewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BDE506ECE97701EBA44FDBFF401C1A04 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
 		C14F3C43705B0BE5D78835704FE1F2E0 /* Pods-qiitaViewer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-qiitaViewer-resources.sh"; sourceTree = "<group>"; };
 		C4A9A658C966F6BB111BEDBDEA1F874A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C68D9C3AC791C42EBB4687DBBAD02ED0 /* Pods-qiitaViewerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-qiitaViewerTests.modulemap"; sourceTree = "<group>"; };
-		D032A29E584B77AE187E586922267CF5 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		D87855683F1411D69CE0157AF0A89077 /* Pods_qiitaViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_qiitaViewerTests.framework; path = "Pods-qiitaViewerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C68D9C3AC791C42EBB4687DBBAD02ED0 /* Pods-qiitaViewerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-qiitaViewerTests.modulemap"; sourceTree = "<group>"; };
+		D032A29E584B77AE187E586922267CF5 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		D87855683F1411D69CE0157AF0A89077 /* Pods_qiitaViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiitaViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D92D3FBEE0EB84D48CE219FFE7B56C4C /* Pods-qiitaViewerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-qiitaViewerTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D985181DA469DBAEC7A41665ECC70BA9 /* Pods-qiitaViewerTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-qiitaViewerTests-frameworks.sh"; sourceTree = "<group>"; };
 		DA12EB9CB64279C6837BF05F5C5399E9 /* Pods-qiitaViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-qiitaViewer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -195,7 +195,6 @@
 				BDE506ECE97701EBA44FDBFF401C1A04 /* SwiftyJSON.swift */,
 				8EC39E1DC11846207722B71AAFE40F98 /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -362,7 +361,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0910;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -481,6 +480,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
