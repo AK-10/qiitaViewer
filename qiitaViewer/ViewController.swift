@@ -50,7 +50,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let sb: UIStoryboard = self.storyboard!
+        let webView = sb.instantiateViewController(withIdentifier: "webView") as! WebViewController
+        if let url = articles[indexPath.row].url {
+            webView.url = url
+        } else {
+            print("not found url")
+        }
+    self.navigationController?.pushViewController(webView, animated: true)
     }
 }
 
