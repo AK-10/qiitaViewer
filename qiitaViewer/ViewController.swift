@@ -10,8 +10,12 @@ import UIKit
 import Foundation
 import SwiftyJSON
 
-class ViewController: UIViewController {
+protocol articleDelegate {
+    func insertArticles(items: [Article])
+}
 
+class ViewController: UIViewController, articleDelegate {
+    
     @IBOutlet weak var articleTable: UITableView!
     var articles: [Article] = []
     
@@ -19,6 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         articleTable.dataSource = self
         articleTable.delegate = self
+        Article.delegate = self
         
         let reloadItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh, target: self, action: #selector(onClickRefreshButton))
         self.navigationItem.setRightBarButton(reloadItem, animated: true)
@@ -31,9 +36,21 @@ class ViewController: UIViewController {
                 self!.articleTable.reloadData()
             }
         })
-//        print(articles.count)
+        
+        // Delegate でもやってみた
+//        Article.getArticlesByDelegate(url: url, vc: self)
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    func insertArticles(items: [Article]) {
+        DispatchQueue.main.async {
+            self.articles = items
+            self.articleTable.reloadData()
+        }
+    }
+    
 
     override func viewWillAppear(_ animated: Bool) {
         articleTable.reloadData()
