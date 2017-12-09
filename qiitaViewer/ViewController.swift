@@ -17,9 +17,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        articleTable.dataSource = self
+        articleTable.delegate = self
         // http request
         let url = "https://qiita.com/api/v2/items?"
-        articles = getArticles(url: url)
+        Article.getArticles(url: url, completion: { [weak self] (items) in
+            DispatchQueue.main.async {
+                self!.articles = items
+                self!.articleTable.reloadData()
+            }
+        })
 //        print(articles.count)
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -29,39 +36,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    private func getArticles(url: String) -> [Article] {
-        // setup URLrequest
-        guard let url = URL(string: url) else {
-            print("Error: can not create URL")
-            return []
-        }
-        let urlRequest = URLRequest(url: url)
-        
-        // setup Session
-        let config = URLSessionConfiguration.default
-        let session = URLSession(configuration: config)
-        var items: [Article] = []
-        let task = session.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
-            guard error == nil else {
-                print("error calling")
-                return
-            }
-            guard let responseData = data else {
-                print("Error: did not receive data")
-                return
-            }
-            let json = JSON(responseData)
-            for (_,subJson):(String, JSON) in json {
-                // Do something you want
-                let item = Article(title: subJson["title"].stringValue, id: subJson["user"]["id"].stringValue, url: subJson["url"].stringValue, tags: subJson["tags"].arrayValue.map({ $0["name"].stringValue }))
-                items.append(item)
-            }
-            print("a", items.count) // closure内が後に呼ばれている -> 20
-        })
-        print("b", items.count) //先に呼ばれてる why? -> 0
-        task.resume()
-        return items
-    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Article {
     let title: String
@@ -23,4 +24,38 @@ class Article {
         self.tags = tags
     }
 
+    class func getArticles(url: String, completion: @escaping ([Article]) -> Void) {
+        // setup URLrequest
+        guard let url = URL(string: url) else {
+            print("Error: can not create URL")
+            return
+        }
+        let urlRequest = URLRequest(url: url)
+        
+        // setup Session
+        let config = URLSessionConfiguration.default
+        let session = URLSession(configuration: config)
+        var items: [Article] = []
+        let task = session.dataTask(with: urlRequest){ (data, response, error) in
+            guard error == nil else {
+                print("error calling")
+                return
+            }
+            guard let responseData = data else {
+                print("Error: did not receive data")
+                return
+            }
+            let json = JSON(responseData)
+            for (_,subJson):(String, JSON) in json {
+                // Do something you want
+                let item = Article(title: subJson["title"].stringValue, id: subJson["user"]["id"].stringValue, url: subJson["url"].stringValue, tags: subJson["tags"].arrayValue.map({ $0["name"].stringValue }))
+                items.append(item)
+            }
+            completion(items)
+//            print("a", items.count) // closure内が後に呼ばれている -> 20
+        }
+        task.resume()
+    }
 }
+
+
