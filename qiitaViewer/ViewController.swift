@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         self.navigationItem.setRightBarButton(reloadItem, animated: true)
         
         // http request
-        let url = "https://qiita.com/api/v2/items?"
+        let url = "https://qiita.com/api/v2/items?page=1&per_page=100"
         Article.getArticles(url: url, completion: { [weak self] (items) in
             DispatchQueue.main.async {
                 self!.articles = items
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     }
     
     @objc private func onClickRefreshButton() {
-        let url = "https://qiita.com/api/v2/items?"
+        let url = "https://qiita.com/api/v2/items?page=1&per_page=100"
         Article.getArticles(url: url, completion: { (items) in
             DispatchQueue.main.async {
                 self.articles = items
