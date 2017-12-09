@@ -49,6 +49,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setCell(article: articles[indexPath.row])
         return cell
     }
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }
 

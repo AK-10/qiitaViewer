@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Articles-->
+        <!--News-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="qiitaViewer" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,20 +31,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xof-Rl-Yzi" userLabel="title">
-                                                    <rect key="frame" x="24" y="8" width="300" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <rect key="frame" x="24" y="8" width="337.5" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaY-Sv-pzk" userLabel="name">
-                                                    <rect key="frame" x="24" y="38" width="150" height="11"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <rect key="frame" x="24" y="38" width="112.5" height="11"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PK0-se-hXC" userLabel="tags">
-                                                    <rect key="frame" x="182" y="38" width="150" height="11"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <rect key="frame" x="144.5" y="38" width="187.5" height="11"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -55,10 +55,10 @@
                                                 <constraint firstItem="jaY-Sv-pzk" firstAttribute="leading" secondItem="oCR-hW-ku8" secondAttribute="leading" constant="24" id="4MQ-HS-CV4"/>
                                                 <constraint firstItem="PK0-se-hXC" firstAttribute="leading" secondItem="jaY-Sv-pzk" secondAttribute="trailing" constant="8" id="64M-JI-DMh"/>
                                                 <constraint firstItem="xof-Rl-Yzi" firstAttribute="leading" secondItem="oCR-hW-ku8" secondAttribute="leading" constant="24" id="7ui-zJ-TRT"/>
-                                                <constraint firstItem="xof-Rl-Yzi" firstAttribute="width" secondItem="oCR-hW-ku8" secondAttribute="width" multiplier="0.8" id="C9c-VO-fi4"/>
+                                                <constraint firstItem="xof-Rl-Yzi" firstAttribute="width" secondItem="oCR-hW-ku8" secondAttribute="width" multiplier="0.9" id="C9c-VO-fi4"/>
                                                 <constraint firstItem="xof-Rl-Yzi" firstAttribute="height" secondItem="oCR-hW-ku8" secondAttribute="height" multiplier="0.4" id="FqJ-BF-XVS"/>
-                                                <constraint firstItem="jaY-Sv-pzk" firstAttribute="width" secondItem="oCR-hW-ku8" secondAttribute="width" multiplier="0.4" id="SHp-Lq-1Pi"/>
-                                                <constraint firstItem="PK0-se-hXC" firstAttribute="width" secondItem="oCR-hW-ku8" secondAttribute="width" multiplier="0.4" id="ShZ-mS-kel"/>
+                                                <constraint firstItem="jaY-Sv-pzk" firstAttribute="width" secondItem="oCR-hW-ku8" secondAttribute="width" multiplier="0.3" id="SHp-Lq-1Pi"/>
+                                                <constraint firstItem="PK0-se-hXC" firstAttribute="width" secondItem="oCR-hW-ku8" secondAttribute="width" multiplier="0.5" id="ShZ-mS-kel"/>
                                                 <constraint firstItem="PK0-se-hXC" firstAttribute="baseline" secondItem="jaY-Sv-pzk" secondAttribute="baseline" id="X1I-3L-gK3"/>
                                                 <constraint firstItem="jaY-Sv-pzk" firstAttribute="top" secondItem="xof-Rl-Yzi" secondAttribute="bottom" constant="8" id="lHs-3X-YCC"/>
                                                 <constraint firstItem="jaY-Sv-pzk" firstAttribute="height" secondItem="oCR-hW-ku8" secondAttribute="height" multiplier="0.2" id="mtL-QE-0cU"/>
@@ -83,7 +83,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Articles" id="pT3-dB-bgf"/>
+                    <navigationItem key="navigationItem" title="News" id="pT3-dB-bgf"/>
                     <connections>
                         <outlet property="articleTable" destination="35b-rk-jtm" id="vlQ-ok-6en"/>
                     </connections>
@@ -91,6 +91,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1101.5999999999999" y="-234.33283358320841"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fDa-Lh-8Ac">
+            <objects>
+                <viewController storyboardIdentifier="webView" id="F1k-zw-NF9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dhi-YG-SP4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5cU-rS-ifW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ZJ-p2-xEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088" y="562"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qvU-1j-iJ2">
