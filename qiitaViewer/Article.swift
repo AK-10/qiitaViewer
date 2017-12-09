@@ -52,7 +52,6 @@ class Article {
                 items.append(item)
             }
             completion(items)
-//            print("a", items.count) // closure内が後に呼ばれている -> 20
         }
         task.resume()
     }

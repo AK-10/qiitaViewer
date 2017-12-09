@@ -19,6 +19,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         articleTable.dataSource = self
         articleTable.delegate = self
+        
+        let reloadItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh, target: self, action: #selector(onClickRefreshButton))
+        self.navigationItem.setRightBarButton(reloadItem, animated: true)
+        
         // http request
         let url = "https://qiita.com/api/v2/items?"
         Article.getArticles(url: url, completion: { [weak self] (items) in
@@ -31,11 +35,24 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        articleTable.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @objc private func onClickRefreshButton() {
+        let url = "https://qiita.com/api/v2/items?"
+        Article.getArticles(url: url, completion: { (items) in
+            DispatchQueue.main.async {
+                self.articles = items
+                self.articleTable.reloadData()
+            }
+        })
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
